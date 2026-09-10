@@ -8,16 +8,16 @@ pipeline {
 
             steps {
 
-                bat 'python -m pip install -r requirements.txt'
+                bat '"C:\\Python314\\python.exe" -m pip install -r requirements.txt'
 
             }
         }
 
-        stage('Run Bank Program') {
+        stage('Check Python Files') {
 
             steps {
 
-                bat 'python main.py'
+                bat '"C:\\Python314\\python.exe" -m compileall .'
 
             }
         }
